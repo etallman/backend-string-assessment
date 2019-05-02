@@ -18,11 +18,13 @@
 def verbing(s):
   if len(s) >= 3:
     if s.endswith('ing') == True:
-        print(s + 'ly')
+        result = s + 'ly'
+        return result
     else:
-        print(s + 'ing')
+        result = s + 'ing'
+        return result
   else:
-    print(s)
+    return s
 
 
 # E. not_bad
@@ -58,7 +60,7 @@ def front_back(a, b):
   else:
     b_front, b_back = b[0:len(b)/2 + 1], b[len(b)/2 + 1 :]
  
-  print(a_front + b_front + a_back + b_back)
+  return a_front + b_front + a_back + b_back
 
 
 # Provided simple test() function used in main() to print

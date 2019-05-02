@@ -15,11 +15,14 @@
 # add 'ly' instead.
 # If the string length is less than 3, leave it unchanged.
 # Return the resulting string.
-
-
 def verbing(s):
-    """Your code goes here.  Edit this docstring."""
-    return
+  if len(s) >= 3:
+    if s.endswith('ing') == True:
+        print(s + 'ly')
+    else:
+        print(s + 'ing')
+  else:
+    print(s)
 
 
 # E. not_bad
@@ -30,6 +33,7 @@ def verbing(s):
 # Return the resulting string.
 # So 'This dinner is not that bad!' yields:
 # This dinner is good!
+
 def not_bad(s):
     """Your code goes here.  Edit this docstring."""
     return
@@ -42,9 +46,19 @@ def not_bad(s):
 # e.g. 'abcde', the front half is 'abc', the back half 'de'.
 # Given 2 strings, a and b, return a string of the form
 #  a-front + b-front + a-back + b-back
+
 def front_back(a, b):
-    """Your code goes here.  Edit this docstring."""
-    return
+
+  if len(a)%2 == 0:
+    a_front, a_back = a[0:len(a)/2], a[len(a)/2:]
+  else:
+    a_front, a_back = a[0:len(a)/2 + 1], a[len(a)/2 + 1:]
+  if len(b)%2 ==0:
+    b_front, b_back = b[0:len(b)/2], b[len(b)/2:]
+  else:
+    b_front, b_back = b[0:len(b)/2 + 1], b[len(b)/2 + 1 :]
+ 
+  print(a_front + b_front + a_back + b_back)
 
 
 # Provided simple test() function used in main() to print

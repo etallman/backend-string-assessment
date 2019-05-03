@@ -37,8 +37,13 @@ def verbing(s):
 # This dinner is good!
 
 def not_bad(s):
-    """Your code goes here.  Edit this docstring."""
-    return
+    """I created a range that I used to extract text between "not" and "bad" by assigning the start indexes of each word. Next, I compared those indices to ensure that "not" came before "bad". Under these conditions, the text from not to bad was extracted and that text was replaced with the word "good". The end result should extract text between not and bad and return good."""
+    start = s.find("not")
+    end = s.find("bad")
+    if start < end:
+      extract = s[start:end+3]
+      final = s.replace(extract, "good")
+    return final
 
 
 # F. front_back

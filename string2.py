@@ -43,7 +43,9 @@ def not_bad(s):
     if start < end:
       extract = s[start:end+3]
       final = s.replace(extract, "good")
-    return final
+      return final
+    else:
+      return s
 
 
 # F. front_back

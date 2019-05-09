@@ -25,7 +25,7 @@
 # and donuts(23) returns 'Number of donuts: many'
 def donuts(count):
     if count >= 10:
-      response = "Many"
+      response = "Number of donuts: many"
     else:
       response = "Number of donuts: " + str(count)
     return response
@@ -39,7 +39,7 @@ def donuts(count):
 
 def both_ends(s):  
   if len(s) < 2:
-      result = " "
+      result = ""
   else:
       result = s[:2] + s[-2:]
   return result
